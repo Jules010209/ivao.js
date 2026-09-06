@@ -122,7 +122,7 @@ Contributions are always welcome! See `CONTRIBUTING.md` for ways to get started.
 
 ## License
 
-[GPL-2.0](https://github.com/ivao-js/ivao.js/blob/master/LICENSE)
+[GPL-2.0](https://github.com/Jules010209/ivao.js/blob/master/LICENSE)
 
 ## Authors
 

@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ivao-js/ivao.js.git"
+    "url": "git+https://github.com/Jules010209/ivao.js.git"
   },
   "scripts": {
     "fetch-specs": "node tools/fetch-specs.js",
@@ -32,9 +32,9 @@
   "author": "Jules010209",
   "license": "GPL-2.0",
   "bugs": {
-    "url": "https://github.com/ivao-js/ivao.js/issues"
+    "url": "https://github.com/Jules010209/ivao.js/issues"
   },
-  "homepage": "https://github.com/ivao-js/ivao.js#readme",
+  "homepage": "https://github.com/Jules010209/ivao.js#readme",
   "dependencies": {
     "axios": "^1.4.0"
   },
