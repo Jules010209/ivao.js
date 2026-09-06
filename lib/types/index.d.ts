@@ -1,10 +1,14 @@
-export interface apiOption {
-    type: 'apiKey';
-    apiKey: string;
-}
-export interface oauthOption {
-    type: 'oauth2';
-    client_id: string;
-    secret_id: string;
-}
-export type options = apiOption | oauthOption;
+export * from './common';
+export * from './manual';
+export * from './data';
+export * from './core';
+export * from './tracker';
+export * from './oauth';
+export * from './mtl';
+export * from './fpl';
+export * from './webeye';
+export * from './status';
+export * from './atc';
+export * from './events';
+export * from './autoAtis';
+export * from './legacy';

@@ -1,5 +1,8 @@
 /node_modules
 /src
+/tools
+/test
+/docs
 /.github
 tsconfig.json
 .env

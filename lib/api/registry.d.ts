@@ -1,0 +1,38 @@
+import { HttpClient } from '../http';
+import { DataApi } from './data';
+import { CoreApi } from './core';
+import { TrackerApi } from './tracker';
+import { OAuthApi } from './oauth';
+import { MtlApi } from './mtl';
+import { FlightPlanApi } from './fpl';
+import { WebeyeApi } from './webeye';
+import { StatusApi } from './status';
+import { AtcApi } from './atc';
+import { EventsApi } from './events';
+import { AutoAtisApi } from './autoAtis';
+/** All IVAO APIs exposed by the client, keyed by property name. */
+export declare class ApiRegistry {
+    /** IVAO Data API: aircrafts, airlines, airports, ATC positions, NOTAMs, sectors, softwares, weather... */
+    readonly data: DataApi;
+    /** IVAO Core API: users, divisions, staff, permissions, settings and FRAs. */
+    readonly core: CoreApi;
+    /** IVAO Tracker API: whazzup, live sessions, flight plans, ATIS, tracks and statistics. */
+    readonly tracker: TrackerApi;
+    /** IVAO OAuth / SSO API: tokens, scopes, applications and granted apps. */
+    readonly oauth: OAuthApi;
+    /** IVAO MTL API: aircraft models, textures, base models, effects, sounds, scripts and paintkits. */
+    readonly mtl: MtlApi;
+    /** IVAO Flight Plan API: user aircrafts and flight plans. Use 'me' as vid for the current user. */
+    readonly fpl: FlightPlanApi;
+    /** IVAO Webeye API: friends management (user token required). */
+    readonly webeye: WebeyeApi;
+    /** IVAO Status API: generated status images (served from status.ivao.aero). */
+    readonly status: StatusApi;
+    /** IVAO ATC Scheduling System: ATC bookings. */
+    readonly atc: AtcApi;
+    /** IVAO Events API v1: scheduled events. */
+    readonly events: EventsApi;
+    /** IVAO Auto ATIS API: digital ATIS and runway parameters. */
+    readonly autoAtis: AutoAtisApi;
+    constructor(http: HttpClient);
+}
