@@ -14,17 +14,24 @@ jobs:
           node-version: 20
       - run: npm ci
       - run: npm run build
+      - run: npm test
 
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
+    # Trusted publishing (OIDC): no npm token needed. Configure the trusted publisher on
+    # https://www.npmjs.com/package/ivao.js/access with repository Jules010209/ivao.js
+    # and workflow file "npm-publish.yml".
+    permissions:
+      contents: read
+      id-token: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           registry-url: https://registry.npmjs.org/
+      - run: npm install -g npm@latest
       - run: npm ci
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
+      - run: npm run build
+      - run: npm publish --provenance --access public
